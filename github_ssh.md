@@ -1,10 +1,10 @@
 1. use the `ssh-keygen -t rsa -b 4096` to generate a private-public key pair.
-2. open github.com, go to settings, SSH AND GPG keys.
-3. copy the contents of public key file(extension = .pub) into key-section(textbox)
-4. check the box(if you want read AND write permissions)
-5. click add key
 6. `eval "$(ssh-agent -s)"`
 7. `ssh-add key_github`
+4. open github.com, go to settings, SSH AND GPG keys.
+5. copy the contents of public key file(extension = .pub) into key-section(textbox)
+6. check the box(if you want read AND write permissions)
+7. click add key
 8. `ssh -T -p 443 git@ssh.github.com` (we can remove -p 443, since this is the argument for the port)
 9. `git remote set-url origin ssh://git@ssh.github.com:443/akshayDev17/NNprojects.git`
    instead of NNprojects.git, use your desired repo-name.
