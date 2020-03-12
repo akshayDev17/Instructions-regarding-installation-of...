@@ -37,3 +37,9 @@
 * https://stackoverflow.com/questions/8588768/how-do-i-avoid-the-specification-of-the-username-and-password-at-every-git-push
 * https://askubuntu.com/questions/610940/ssh-connect-to-host-github-com-port-22-connection-refused
 * https://stackoverflow.com/questions/7953806/github-ssh-via-public-wifi-port-22-blocked/34444860#34444860
+
+
+
+## Get specific files from github-repo:
+
+`wget <link/to/raw/file>` 
