@@ -11,6 +11,6 @@ to check which all ips have logged into you: `last `
 export HISTFILESIZE=10000
 
 # time-log your commands
-export HISTTIMEFORMAT="%F %T"
+export HISTTIMEFORMAT="%F %T "
 ```
 
