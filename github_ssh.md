@@ -1,3 +1,5 @@
+## Github
+
 1. use the `ssh-keygen -t rsa -b 4096` to generate a private-public key pair.
 
 2. `eval "$(ssh-agent -s)"`
@@ -16,7 +18,7 @@
 
 9. `git remote set-url origin ssh://git@ssh.github.com:443/akshayDev17/NNprojects.git`
    instead of NNprojects.git, use your desired repo-name.
-   
+
 10. `sudo ufw disable` , use this if login is still disabled.
 
 11. If this error occurs:
@@ -28,7 +30,44 @@
     ssh-add key_github
     ```
 
-    
+
+
+
+
+
+## Gitlab:
+
+1. use the `ssh-keygen -t rsa -b 4096` to generate a private-public key pair.
+
+2. `eval "$(ssh-agent -s)"`
+
+3. `ssh-add key_github`
+
+4. open gitlab.com, sign in to your account, open the repository link of a project you want to add SSH keys into.
+
+5. copy the contents of public key file(extension = .pub) into key-section(textbox)
+
+6. to add the key:
+
+   ```bash
+   eval "$(ssh-agent -s)"
+   ssh-add key_file_name
+   ```
+
+7. to test the key ```ssh -T git@gitlab.com```
+
+8. to set the appropriate origin url:
+
+   ```bash
+   git remote -v
+   # suppose the output is:
+   # origin	https://gitlab.com/<user_name>/<project_name>.git (fetch)
+   # origin	https://gitlab.com/<user_name>/<project_name>.git (push)
+   
+   git remote set-url origin git@gitlab.com:<user_name>/<project_name>.git
+   ```
+
+   
 
 
 
